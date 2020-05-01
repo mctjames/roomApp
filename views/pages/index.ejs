@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Roominate, Roomour, RoomAPP, Roomba</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+      <body>
+      
+      <div class="jumbotron text-center">
+        <h1>Find a SFU Burnaby Study Space</h1>
+        <p>Fall 2019 Edition</p> 
+      </div>
+        
+      <h1>Find Any Free Room</h1>
+
+      <form id = "details" method="POST" action="/results">
+        <label for ="weekDay">Please select a weekday: </label>
+        <select id="Weekday" name="weekday">
+          <option value="Mo">Monday</option>
+          <option value="Tu">Tuesday</option>
+          <option value="We">Wednesday</option>
+          <option value="Th">Thursday</option>
+          <option value="Fr">Friday</option>
+        </select>
+            </br>
+        <label for="start">Select a start time between 8:30-20:30 </label>
+        <select id="start" name ="start">
+          <option value="8:30">08:30</option>      
+          <option value="9:00">09:00</option>      
+          <option value="9:30">09:30</option>      
+          <option value="10:00">10:00</option>      
+          <option value="10:30">10:30</option>      
+          <option value="11:00">11:00</option>      
+          <option value="11:30">11:30</option>      
+          <option value="12:00">12:00</option>      
+          <option value="12:30">12:30</option>      
+          <option value="13:00">13:00</option>      
+          <option value="13:30">13:30</option>      
+          <option value="14:00">14:00</option>      
+          <option value="14:30">14:30</option>      
+          <option value="15:00">15:00</option>      
+          <option value="15:30">15:30</option>      
+          <option value="16:00">16:00</option>      
+          <option value="16:30">16:30</option>      
+          <option value="17:00">17:00</option>      
+          <option value="17:30">17:30</option>      
+          <option value="18:00">18:00</option>      
+          <option value="18:30">18:30</option>      
+          <option value="19:00">19:00</option>      
+          <option value="19:30">19:30</option>      
+          <option value="20:00">20:00</option>      
+          <option value="20:30">20:30</option>      
+        </select>
+      </br>
+        <label for="end">Select a start time between 9:00-20:30 </label>
+        <select id="end" name ="end">
+          <option value="9:00">09:00</option>      
+          <option value="9:30">09:30</option>      
+          <option value="10:00">10:00</option>      
+          <option value="10:30">10:30</option>      
+          <option value="11:00">11:00</option>      
+          <option value="11:30">11:30</option>      
+          <option value="12:00">12:00</option>      
+          <option value="12:30">12:30</option>      
+          <option value="13:00">13:00</option>      
+          <option value="13:30">13:30</option>      
+          <option value="14:00">14:00</option>      
+          <option value="14:30">14:30</option>      
+          <option value="15:00">15:00</option>      
+          <option value="15:30">15:30</option>      
+          <option value="16:00">16:00</option>      
+          <option value="16:30">16:30</option>      
+          <option value="17:00">17:00</option>      
+          <option value="17:30">17:30</option>      
+          <option value="18:00">18:00</option>      
+          <option value="18:30">18:30</option>      
+          <option value="19:00">19:00</option>      
+          <option value="19:30">19:30</option>      
+          <option value="20:00">20:00</option>      
+          <option value="20:30">20:30</option>      
+        </select>
+            </br>
+        <input type="submit" value ="submit" />
+      </form>
+
+      <h1>Is a Specific Room Free?</h1>
+      <form id = "details" method="POST" action="/resultsTwo">
+        <label for ="weekDay">Please select a weekday: </label>
+        <select id="Weekday" name="weekday">
+          <option value="Mo">Monday</option>
+          <option value="Tu">Tuesday</option>
+          <option value="We">Wednesday</option>
+          <option value="Th">Thursday</option>
+          <option value="Fr">Friday</option>
+        </select>
+            </br>
+        <label for="roomNum">For option two: Select a room to search - Ex. AQ 5049 </label>
+        <input type="text" name ="roomNum">
+            </br>
+        <input type="submit" value ="submit" />
+      </form>
+
+
+</body>
+</html>
