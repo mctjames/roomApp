@@ -173,6 +173,6 @@ else:
 	selected_room = "roominate"
     #roomNum
 	while (selected_room not in lrooms):
-		selected_room = sys.argv[3]
+		selected_room = sys.argv[3] + " " + sys.argv[4]
 	print (room_info(selected_room, two_letter_weekday, biglist))
 	

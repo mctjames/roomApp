@@ -40,6 +40,7 @@ app.post('/resultsTwo', urlencodedParser, function(req, res){
     var process = spawn('python', ["./python_code/roomour_f2019.py", 
                                     req.body.weekday, 
                                     req.body.option = 2,
+                                    req.body.buildingNum,
                                     req.body.roomNum] );
 
     process.stdout.on('data', function(data) {
