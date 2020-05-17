@@ -31,9 +31,6 @@ app.post('/results', urlencodedParser, function(req, res){
     // console.log(typeof data);
     res.render('pages/results', {data: data, values: req.body})
     })
-
-
-
 });
 
 
@@ -51,9 +48,28 @@ app.post('/resultsTwo', urlencodedParser, function(req, res){
     console.log(data.toString());
     res.render('pages/resultsTwo', {data: data, values: req.body})
     })
-
-
 });
+
+// displays the results of the python file on the /results page
+app.post('/resultsThree', urlencodedParser, function(req, res){
+    console.log(req.body);
+    var spawn = require("child_process").spawn;
+    var process = spawn('python', ["./python_code/roomour_f2019.py", 
+                                    req.body.weekday, 
+                                    req.body.option = 3,
+                                    req.body.start,
+                                    req.body.end,
+                                    req.body.buildingNum] );
+
+    process.stdout.on('data', function(data) {
+    console.log(data.toString());
+    res.render('pages/resultsThree', {data: data, values: req.body})
+    })
+});
+
+
+
+
 
 
 // start server

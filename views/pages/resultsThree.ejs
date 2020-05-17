@@ -10,17 +10,17 @@
       <body>
       
       <div class="jumbotron text-center">
-        <h1>Find a study space</h1>
-        <p>Results may vary during global pandemics.</p> 
+        <h1>Find the Nearest Study Spaces</h1>
+        <p>Distances are a rough aproximation based on buildings</p> 
       </div>
         
       <h1>Thanks for using Roominate</h1>
 
       
       <p> Now displaying rooms avalible on <%= values.weekday %> 
-        between <%= values.start %> and <%= values.end %>.  </p>
+        between <%= values.start %> and <%= values.end %>. In order of proximity to <%= values.buildingNum %>: </p>
 
-      <%= data %>
+      <p style="white-space: pre-wrap"><%= data.toString() %></p>
 
 
 </body>
