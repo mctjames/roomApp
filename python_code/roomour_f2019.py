@@ -258,6 +258,8 @@ elif(answer == "3"):
 	#current location (by building code)
 	while (currentBuilding not in buildingGraph):
 		currentBuilding = sys.argv[5]
+	
+
 
 
 	#run the free rooms calculation. 
