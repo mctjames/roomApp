@@ -1,8 +1,8 @@
 # roomApp
-SFU room finder app
+SFU free room finder app
 
 https://roominate-roomour.herokuapp.com/
 
-Basic website that allows users to search for empty rooms on the SFU campus. Currently only works with Fall 2019 schedule.
+Basic website that allows users to search for the nearest empty rooms on the SFU campus using Dijkstra's shortest path first algorithm.  Currently utliizing the Fall 2019 schedule due to the Covid-19 situation.
 
-Goals - automate the process of getting new term data. - add error handling to inputs - sort specific room outputs - beautify website
+Goals/To do - automate the process of getting new term data. Beautify website. 

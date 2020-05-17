@@ -250,18 +250,13 @@ elif(answer == "3"):
 	#start time
 	while (start_time not in timelist):
 		start_time = sys.argv[3]
-
 	#end time
 	while (end_time not in timelist):
 		end_time = sys.argv[4]
-
 	#current location (by building code)
 	while (currentBuilding not in buildingGraph):
 		currentBuilding = sys.argv[5]
 	
-
-
-
 	#run the free rooms calculation. 
 	free_rooms=empty_by_window(two_letter_weekday, start_time, end_time, biglist)
 
@@ -277,7 +272,6 @@ elif(answer == "3"):
 		if key not in free_rooms_dict:
 			free_rooms_dict[key] = list()
 		free_rooms_dict[key].append(value)
-
 
 	#call the room distance algorith and determine the distance of buildings from selected location. 
 	closest_rooms = dijkstra(buildingGraph, sys.argv[5]) 
@@ -297,10 +291,6 @@ elif(answer == "3"):
 	for key, value in a:
 		if isinstance(value[0], int) or isinstance(value[0], float):
 			if value[1:]:
-				print(key, *value[1:], sep=" ")
-
-
-
-
-
+				print(key, end=': ')
+				print(*value[1:], sep=" ")
 
